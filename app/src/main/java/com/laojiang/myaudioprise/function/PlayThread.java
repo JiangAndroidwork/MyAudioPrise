@@ -10,7 +10,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 
 /**
  * Created by kqw on 2016/8/26.
@@ -55,7 +54,7 @@ public class PlayThread extends Thread {
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 //            InputStream inputStream = mActivity.getResources().getAssets().open(mFileName);
             File file = new File(mFileName);
-            InputStream inputStream = new FileInputStream(file);
+            FileInputStream inputStream = new FileInputStream(file);
 
             // 缓冲区
             byte[] buffer = new byte[1024];

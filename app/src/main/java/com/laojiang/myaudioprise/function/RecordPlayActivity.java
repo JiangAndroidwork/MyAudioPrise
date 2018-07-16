@@ -140,22 +140,26 @@ public class RecordPlayActivity extends AppCompatActivity implements OnClickList
 //        playTwo = new PlayThread(this, "source.pcm");
 //        playTwo.setChannel(true, true);
 //        playTwo.start();
-
-
-        File file1 = new File(Constants.yuansheng);
-        if (file1.exists()) {
-            Mp3ToPcmUtil decodeMp3 = new Mp3ToPcmUtil(this, Constants.yuansheng, Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "playerTest" + File.separator + "空空如也.pcm");
-            decodeMp3.addDecodeListener(new Mp3ToPcmUtil.DeCodeListener() {
-                @Override
-                public void decodeSuccess() {
-                    prepareTwo = true;
-                    mYuanSheng = new PlayThread(RecordPlayActivity.this, Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "playerTest" + File.separator + "空空如也.pcm");
-                    mYuanSheng.setChannel(true, true);
-                    mYuanSheng.play();
-                    handler.sendEmptyMessage(1);
-                }
-            });
-        }
+        String file = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "playerTest" + File.separator + "空空如也.pcm";
+        File filePlay = new File(file);
+        Log.i("开始播放",filePlay.exists()+"");
+        mYuanSheng = new PlayThread(RecordPlayActivity.this,file );
+        mYuanSheng.setChannel(true, true);
+        mYuanSheng.play();
+//        File file1 = new File(Constants.yuansheng);
+//        if (file1.exists()) {
+//            Mp3ToPcmUtil decodeMp3 = new Mp3ToPcmUtil(this, Constants.yuansheng, Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "playerTest" + File.separator + "空空如也.pcm");
+//            decodeMp3.addDecodeListener(new Mp3ToPcmUtil.DeCodeListener() {
+//                @Override
+//                public void decodeSuccess() {
+//                    prepareTwo = true;
+//                    mYuanSheng = new PlayThread(RecordPlayActivity.this, Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "playerTest" + File.separator + "空空如也.pcm");
+//                    mYuanSheng.setChannel(true, true);
+//                    mYuanSheng.play();
+//                    handler.sendEmptyMessage(1);
+//                }
+//            });
+//        }
     }
 
     public int writeCovertCount(int count) {
