@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MyAudioPrise</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="str_my_record">录音文件</string>
+    <string name="str_singing">演唱</string>
+    <string name="str_finish_recod">完成录音</string>
+
+    <string name="str_hcb_rerecord">重新哼唱</string>
+    <string name="str_hcb_pass">放弃</string>
+    <string name="str_hcb_cancel">取消</string>
+    <string name="str_set_name">名称：</string>
+    <string name="str_search_name">输入文件名称</string>
+    <string name="str_confir_save">确 认保存</string>
+</resources>
