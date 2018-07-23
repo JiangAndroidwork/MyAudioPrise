@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyAudioPrise.iml" filepath="$PROJECT_DIR$/MyAudioPrise.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/audiolibrary/audiolibrary.iml" filepath="$PROJECT_DIR$/audiolibrary/audiolibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/mange/mange.iml" filepath="$PROJECT_DIR$/mange/mange.iml" />
     </modules>
   </component>

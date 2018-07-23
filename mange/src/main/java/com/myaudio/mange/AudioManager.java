@@ -5,7 +5,7 @@ package com.myaudio.mange;
  * Created by Jiang on 2018/7/13 .
  */
 
-public class AudioManager {
+public  class AudioManager {
     static {
         System.loadLibrary("mad");
     }
@@ -13,8 +13,17 @@ public class AudioManager {
     public static native int decodeMp3ToPCM2(String mp3File, String mp3PCM);
     //两个pcm合成一个
     public static native int mix2PCMToPCM2(String sourcePCM, String mp3PCM, String mixPCM);
+    public static native int mix2PCMToPCM(String sourcePCM, String mp3PCM, String mixPCM);
 
+    //合成回调
+    public int mixCallBack(int count) {
+        return count;
+    }
 
+    //转换回调
+    public  int covertCallBack(int count){
+        return count;
+    }
 
 
 

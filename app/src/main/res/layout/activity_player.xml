@@ -9,6 +9,12 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="start" />
+    <Button
+        android:visibility="gone"
+        android:id="@+id/bt_pause"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="暂停" />
 
     <Button
         android:id="@+id/bt_yinpinhuilu_testing_exit"
@@ -25,11 +31,23 @@
         android:id="@+id/bt_bg_sound_change"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="伴奏" />
+        android:text="原声" />
+    <Button
+        android:id="@+id/bt_erfan"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="没有" />
     <Button
         android:id="@+id/btn_volume"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
        android:text="音量" />
+
+    <Button
+        android:id="@+id/btn_mix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="合成" />
 </LinearLayout>

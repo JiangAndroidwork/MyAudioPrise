@@ -9,7 +9,7 @@ import android.widget.PopupWindow;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
-import com.laojiang.myaudioprise.content.Constants;
+import com.laojiang.myaudioprise.content.Constant;
 
 public class ProgressBarPopup extends PopupWindow {
 
@@ -19,7 +19,7 @@ public class ProgressBarPopup extends PopupWindow {
 		
 	public ProgressBarPopup(Context context) {
 		// TODO Auto-generated constructor stub
-		int screenWidth = Constants.getScreenWidth(context);
+		int screenWidth = Constant.getScreenWidth(context);
 		
 		mAudioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
 		maxVolume = mAudioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);

@@ -10,7 +10,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 
-import com.laojiang.myaudioprise.content.Constants;
+import com.laojiang.myaudioprise.content.Constant;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -165,7 +165,7 @@ public class LyricView extends View {
 			}
 		}
 		
-		int screenWidth = Constants.getScreenWidth(context);
+		int screenWidth = Constant.getScreenWidth(context);
 		
 		if(max<15){
 			SIZEWORD = screenWidth / 15;

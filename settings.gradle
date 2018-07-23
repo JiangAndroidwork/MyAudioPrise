@@ -1,1 +1,1 @@
-include ':app', ':mange'
+include ':app', ':mange', ':audiolibrary'
