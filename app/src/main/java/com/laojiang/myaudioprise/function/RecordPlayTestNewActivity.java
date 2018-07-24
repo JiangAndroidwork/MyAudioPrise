@@ -133,19 +133,16 @@ public class RecordPlayTestNewActivity extends AppCompatActivity implements OnCl
         bgTimeVew = findViewById(R.id.tv_player_time);
         btVolume = findViewById(R.id.btn_volume);
         btSoundChange = findViewById(R.id.bt_bg_sound_change);
-        btMix = findViewById(R.id.btn_mix);
         btPause = findViewById(R.id.bt_pause);
         btErFan = findViewById(R.id.bt_erfan);
         btSoundChange.setEnabled(false);
         btErFan.setEnabled(false);
         btErFan.setOnClickListener(this);
-        btMix.setOnClickListener(this);
         btPause.setOnClickListener(this);
         btSoundChange.setOnClickListener(this);
         btVolume.setOnClickListener(this);
         btStart.setOnClickListener(this);
         this.setTitle("耳返");
-
 
         init();
 
@@ -232,16 +229,7 @@ public class RecordPlayTestNewActivity extends AppCompatActivity implements OnCl
             case R.id.bt_bg_sound_change://原声伴奏切换
                 changeBgSound();
                 break;
-            case R.id.btn_mix://合成
-                stopAll();
 
-
-                AudioFunction.BeginComposeAudio(Constant.getPCM() + "source.pcm", Constant.banzouPcm, Constant.getLocalPath() + "record/mix.mp3", false,
-                        com.jhl.audiolibrary.Constant.VoiceWeight, com.jhl.audiolibrary.Constant.VoiceBackgroundWeight,
-                        -1 * com.jhl.audiolibrary.Constant.MusicCutEndOffset / 2 * com.jhl.audiolibrary.Constant.RecordDataNumberInOneSecond, this);
-
-
-                break;
             case R.id.bt_pause:
                 if (btPause.getText().equals("暂停录音")) {
                     RecorderEngine.getInstance().pauseRecordVoice();

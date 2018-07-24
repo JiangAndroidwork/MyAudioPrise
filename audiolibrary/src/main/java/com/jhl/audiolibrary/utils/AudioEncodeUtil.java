@@ -340,7 +340,7 @@ public class AudioEncodeUtil {
         header.fileLength = TOTAL_SIZE + (44 - 8);
         header.FmtHdrLeth = 16;
         header.BitsPerSample = 16;
-        header.Channels = 2;
+        header.Channels = 1;
         header.FormatTag = 0x0001;
         header.SamplesPerSec = 44100;
         header.BlockAlign = (short) (header.Channels * header.BitsPerSample / 8);
